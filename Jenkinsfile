@@ -9,7 +9,7 @@ pipeline {
         }
          stage('cleanwork space') {
             steps {
-                cleanWS()
+                cleanWs()
             }
         }
          stage('code clone') {
