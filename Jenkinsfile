@@ -7,14 +7,14 @@ pipeline {
                 echo 'Hello everyone'
             }
         }
-        //  stage('cleanwork space') {
-        //     steps {
-        //         sh "cleanWS"
-        //     }
-        // }
+         stage('cleanwork space') {
+            steps {
+                cleanWS()
+            }
+        }
          stage('code clone') {
             steps {
-                git url: "https://github.com/Shaheen8954/adarkroom.git", branch: "main"
+                checkout scm
             }
         }
          stage('run container') {
